@@ -1,2 +1,2 @@
 # cs50x Final Project
-My final project to Harvard's CS50 course
+My final project to Harvard's CS50 course is a 
