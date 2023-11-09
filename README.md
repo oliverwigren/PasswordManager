@@ -19,6 +19,13 @@ Link to my video: http
 - CSS
 - Javascript
 - Flask
+
+## Deep dive
+
+### app.py
+This the main functionality to the manager.
+
+### index.html
   
 ### Sources
 
