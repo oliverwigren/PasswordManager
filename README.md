@@ -1,10 +1,10 @@
 # Password Manager
 
 This is my final project to Harvard's CS50x course on the foundations of computer science. I have choosen to create a simple password manager.
-
+<!--
 ### Video
 Link to my video: http
-
+-->
 ## Functionality:
 
 - Generate passwords by three difficulties.
