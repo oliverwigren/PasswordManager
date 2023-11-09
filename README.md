@@ -1,5 +1,5 @@
 # Password Manager
-##### cs50x Final Project
+#### cs50x Final Project
 My final project to Harvard's CS50 course is a Password Manager.
 
 ### Video
