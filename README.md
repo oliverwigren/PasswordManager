@@ -1,11 +1,13 @@
 # cs50x Final Project
 My final project to Harvard's CS50 course is a Password Manager.
 
-# Functionality:
+## Functionality:
+
 - Generate passwords by three difficulties.
 - Delete, Change and, Save passwords to a database.
 
-# Powered by:
+## Powered by:
+
 - Python
 - Sqlite3
 - HTML
@@ -13,4 +15,4 @@ My final project to Harvard's CS50 course is a Password Manager.
 - Javascript
 - Flask
   
-# Sources
+### Sources
