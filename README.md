@@ -5,20 +5,22 @@ This is my final project to HarvardX's CS50 course on the foundations of compute
 ### Video
 Link to my video: http
 -->
-## Functionality:
+## Features:
 
 - Generate passwords by three difficulties.
 - View all passwords in a table
 - Delete, Change and, Save passwords to a database.
+- Log-in with password and username
+- Register as a new user with name, username and password
+- Stay logged in with sessions
 
 ## Powered by:
 
 - Python
-- Sqlite3
+- SQL
 - HTML
-- CSS
-- Javascript
 - Flask
+- Jinja
 
 ## Deep dive
 
@@ -26,8 +28,7 @@ Link to my video: http
 This the main functionality to the manager.
 
 ### index.html
-  
-### Sources
+
 
 
 

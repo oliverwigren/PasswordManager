@@ -1,1 +1,45 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<title> {{name}}'s Passwords</title>
+{% endblock %}
+
+{% block body %}
+
+    <header>
+        <h1>Hello, {{name}}</h1>
+
+        <form action="/logout">
+            <button type="submit">Log out</button>
+        </form>
+    </header>
+
+    <main>
+
+    </main>
+
+    <container>
+        <table>
+            <thead>
+                <tr>
+                    <th>Website</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th><button>New Password</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--{% for rows in passwords %}
+                <tr>
+                    <td>rows["address"]</td>
+                    <td>rows["username"]</td>
+                    <td>rows["password"]</td>
+                    <td><button>Change</button></td>
+                </tr>
+                {% endfor %}-->
+            </tbody>
+        </table>
+    </container>
+
+{% endblock %}
 

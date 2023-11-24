@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<title>Register</title>
+{% endblock %}
+
+{% block body %}
+
+    <form action="/register" method="post">
+        <input type="text" name="name" autocomplete="off" placeholder="Name">
+        <input type="text" name="username" autocomplete="off" placeholder="Username">
+        <input type="text" name="password" autocomplete="off" placeholder="Password">
+        <input type="text" name="password2" autocomplete="off" placeholder="Retype Password"> <!--Hide passord with asteriks-->
+        <button type="submit">Register</button>
+        <h5 id="error">{{errorText}}</h5> <!--Error text här-->
+    </form>
+
+    <script>
+
+        function myFunction() {
+            const list = document.getElementsByTagName("input");
+            for (let i = 0; i < list.length; i++)
+            {
+                if (list[i].innerHTML == "")
+                {
+                    list[i].style.background = "red";
+                }
+            }
+
+        }
+    </script>
+{% endblock %}
