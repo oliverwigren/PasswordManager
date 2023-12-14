@@ -7,6 +7,8 @@ Link to my video: http
 -->
 ## Features:
 
+< :warning: DISCLAIMER
+
 - Generate passwords by three difficulties.
 - View all passwords in a table
 - Delete, Change and, Save passwords to a database.
