@@ -1,13 +1,13 @@
 {% extends "layout.html" %}
 
 {% block head %}
-<title> {{name}}'s Passwords</title>
+{{ username }}'s Passwords
 {% endblock %}
 
 {% block body %}
 
     <header>
-        <h1>Hello, {{name}}</h1>
+        <h1>Hello {{ username }}</h1>
 
         <form action="/logout">
             <button type="submit">Log out</button>
@@ -19,27 +19,28 @@
     </main>
 
     <container>
-        <table>
+        <table class="table">
             <thead>
                 <tr>
                     <th>Website</th>
                     <th>Username</th>
                     <th>Password</th>
-                    <th><button>New Password</button></th>
+                    <th><form action="/create"><button type="submit">New Password</button></form></th>
                 </tr>
             </thead>
             <tbody>
-                <!--{% for rows in passwords %}
+                {% for rows in passwords %}
                 <tr>
-                    <td>rows["address"]</td>
-                    <td>rows["username"]</td>
-                    <td>rows["password"]</td>
-                    <td><button>Change</button></td>
+                    <td>{{ rows["website"] }}</td>
+                    <td>{{ rows["username"] }}</td>
+                    <td>{{ rows["password"] }}</td>
+                    <!--<td> {{ decrypted }} </td>-->
+                    <!--<td><form action="/decrypt" method="post"><button name="decrypt" value="{{ rows["password"] }}" type="submit">View</button></form></td>-->
+                    <td><form action="/change" method="post"><button name="change_button" value="{{ rows["website"] }}" type="submit">Change</button></form></td>
                 </tr>
-                {% endfor %}-->
+                {% endfor %}
             </tbody>
         </table>
     </container>
 
 {% endblock %}
-

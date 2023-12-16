@@ -1,3 +1,48 @@
 body {
-  font-family:"avenir", sans-serif;
+    font-family:"avenir", sans-serif;
+}
+#login-form {
+    text-align:center;
+    width:50%;
+    height:50%;
+    margin:auto;
+    margin-top:50px;
+}
+#login-form input{
+    padding:2.5px;
+    margin:5px;
+    border:none;
+    border-bottom:1px solid black;
+}
+#login-form button {
+    margin-top: 10px;
+    background-color: lightblue;
+    padding: 5px;
+    width: 150px;
+    border: none;
+    border-radius: 30px;
+}
+#login-form h6 {
+    font-size:.9em;
+}
+
+header h1 {
+    margin-top:5px;
+    text-align:center;
+}
+header form {
+    width:fit-content;
+    position:absolute;
+    top:0;
+    margin:15px 0 0 30px;
+}
+container {
+    
+}
+
+footer {
+    position:fixed;
+    bottom:0;
+    text-align:center;
+    width:100%;
 }
