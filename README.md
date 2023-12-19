@@ -31,7 +31,7 @@ This is my final project to HarvardX's CS50 course on the foundations of compute
 - werkzeug.security
 
 ## Usage and installation instructions
-This project is in very early development and is not meant to be installed or used. In this stage is the point to show the source code.
+This project is in very early development and is not meant to be installed or used. In this stage is the point to only show the source code.
 
 ## Deep dive
 
