@@ -15,8 +15,6 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///passwords.db") #Ändra
 
-passwords = {} #Ta bort?
-
 # Configure session
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
@@ -51,16 +49,6 @@ def index():
     passwords = db.execute("SELECT website, username, password FROM passwords WHERE id = ?", session["user_id"])
     if len(passwords) == 0:
         return render_template("index.html")
-    # List of decrypted passwords
-    #decrypted = passwords[3]['password']
-    #mss = passwords[0]['password']
-    #decrypted = str(db.execute("SELECT website, username, password FROM passwords WHERE id = ?", session["user_id"])[3]['password'])
-    #encrypted = rsa.encrypt(mss.encode(), publicKey)
-    #passwords[3]['password']
-    #decrypted = fernet.decrypt(mss).decode()
-    #rsa.decrypt(mss, privateKey).decode()
-    #for pwd in passwords:
-        #decrypted.append(rsa.decrypt(pwd['password'], privateKey).decode())
 
     return render_template("index.html", username=name, passwords=passwords)#, decrypted=decrypted) #TODO: Handle Decryption
 
@@ -80,7 +68,6 @@ def create():
         elif not request.form.get("password"):
             return render_template("create.html", errorText = "Need to enter password")
 
-        #TODO: Check if website already exist
         if 0 != len(db.execute("SELECT * FROM passwords WHERE website = ? AND id = ?", request.form.get("website"), session["user_id"])):
             return render_template("create.html", errorText = "Password for this website already registered")
         #TODO: Time
@@ -90,7 +77,6 @@ def create():
             session["user_id"],
             request.form.get("username"),
             request.form.get("website"),
-            #generate_password_hash(request.form.get("password"))
             request.form.get("password")
             #rsa.encrypt(request.form.get("password").encode(), publicKey)
             #fernet.encrypt(request.form.get("password").encode())
@@ -199,6 +185,10 @@ def register():
         # If password was not submitted
         elif not request.form.get("password2"):
             return render_template("register.html", errorText = "Need to enter password confirmation")
+
+        # If any credentials are too long
+        elif ( len(request.form.get("password")) > 20 or len(request.form.get("username")) > 15 ):
+            return render_template("register.html", errorText = "Password or Username is too long.")
 
         # Ensure the password and confirmation is the same
         elif request.form.get("password") != request.form.get("password2"):
