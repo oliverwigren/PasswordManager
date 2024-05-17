@@ -22,12 +22,11 @@ This is my final project to HarvardX's CS50 course on the foundations of compute
 ## Technologies used
 
 - Python
-- SQLite3
-- HTML
-- CSS
-- Bootstrap
 - Flask
 - Jinja
+- HTML/CSS
+- Bootstrap
+- SQLite3
 - werkzeug.security
 
 ## Usage and installation instructions
